@@ -20,15 +20,7 @@ app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
 
-app.listen(PORT,(err)=>{
-    if (err){
-        console.error(err)
-    }
-    else{
-        console.log("Successfully Connected")
 
-    }
-})
 Connection()
 const Authentication=(req,res,next)=>{
     const token=req.headers["authorization"]
