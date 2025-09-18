@@ -1,5 +1,7 @@
 const {MongoClient,ObjectId}=require("mongodb")
-const url="mongodb://localhost:27017"
+const url = process.env.MONGO_URI;
+
+
 const client=new MongoClient(url)
 const express=require("express")
 const app=express()
@@ -13,7 +15,12 @@ async function Connection(){
     console.log("Successfully Connected")
     db=client.db("users")
 }
-app.listen(3007,(err)=>{
+const PORT = process.env.PORT || 3007;
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
+
+app.listen(PORT,(err)=>{
     if (err){
         console.error(err)
     }
