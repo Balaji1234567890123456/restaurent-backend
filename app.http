@@ -1,0 +1,47 @@
+POST http://localhost:3007/register
+Content-Type:application/json
+
+{
+    "fullName":"Balaji",
+    "email":"balaji12367@gmail.com",
+    "password":"Balaji@123",
+    "address":"vishakapatnam"
+}
+###
+POST http://localhost:3007/login
+Content-Type:application/json
+
+{
+    "email":"sridhar@123",
+    "password":"sridhar"
+}
+###
+GET http://localhost:3007/users
+Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4Y2JiNjdkZTVjN2FiZDhhMjk2ZjMzMiIsImVtYWlsIjoic3JpZGhhckAxMjMiLCJpYXQiOjE3NTgyMDgyNTcsImV4cCI6MTc1ODI5NDY1N30.ZD5X25fzdoceY0nJuhhMiRrHaRjA16a_qEf9flDN3xA
+
+###
+POST http://localhost:3007/book/orders
+Content-Type:application/json
+Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4Y2JiZTcxZTVjN2FiZDhhMjk2ZjM0MyIsImVtYWlsIjoiYmFsYWppMTIzNjdAZ21haWwuY29tIiwiaWF0IjoxNzU4MTg1NjY5LCJleHAiOjE3NTgyNzIwNjl9.2kn8wVXoEvzd5AHn5XKqSI3BrgMvw52qDprH71J5unw
+
+{
+    "items":[
+        {
+            "itemId":3,
+            "itemName":"Hyderabad Biryani",
+            "quantity":3
+        },
+        {
+            "itemId":4,
+            "itemName":"Hyderabad Biryani",
+            "quantity":3
+        },{
+            "itemId":5,
+            "itemName":"Hyderabad Biryani",
+            "quantity":3
+        }
+    ]
+}
+###
+GET http://localhost:3007/user/orders
+Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4Y2JiNjdkZTVjN2FiZDhhMjk2ZjMzMiIsImVtYWlsIjoic3JpZGhhckAxMjMiLCJpYXQiOjE3NTgyMDgyNTcsImV4cCI6MTc1ODI5NDY1N30.ZD5X25fzdoceY0nJuhhMiRrHaRjA16a_qEf9flDN3xA
